@@ -1,0 +1,49 @@
+<h1>Work Experience</h1><hr />
+
+<form ng-repeat="workObj in user.workex" >
+<div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="fullname">Job Title</label>
+        <input type="text" class="form-control" ng-model="workObj.course" />
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="text">Company Name</label>
+        <input type="text" class="form-control" ng-model="workObj.institution" />
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-if="$last">
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="fullname">Start Date</label>
+        <input type="date" class="form-control" ng-model="workObj.sdate" />
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="asas">End Date</label>
+        <input type="date" class="form-control" ng-model="workObj.edate" />
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-if="$last">
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+      <div class="form-group">
+        <label for="fullname">Other Information</label>
+        <textarea cols="32" rows="4" ng-model="workObj.other" class="form-control"> </textarea>
+      </div>
+    </div>
+  </div>
+  <hr/>
+</form>
+<div class="row">
+  	<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12" ng-if="user.workex.length > 0">
+  	<a class="btn btn-lg btn-success text-center" href="#qual" ng-click="putWorkData();">Next</a>
+  	</div>
+  	<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+  	<button class="btn btn-default" ng-click="createWorkObj();">Add New</button><br/><br/>
+  	</div>
+ </div>
